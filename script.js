@@ -294,7 +294,7 @@ if (downloadCvBtn) {
         
         // Create link to actual CV PDF file for direct download
         const link = document.createElement('a');
-        link.href = './asset/NiloyAhsan_CV.pdf';
+        link.href = './assets/NiloyAhsan_CV.pdf';
         link.download = 'NiloyAhsan_CV.pdf';
         link.style.display = 'none';
         document.body.appendChild(link);
