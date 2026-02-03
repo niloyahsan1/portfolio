@@ -447,6 +447,12 @@ body {
     font-size: 1.2rem;
     z-index: 1;
     box-shadow: var(--shadow-glow);
+    transition: all 0.15s ease;
+}
+
+.timeline-icon:hover {
+    transform: translateX(-50%) scale(1.1);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
 }
 
 .timeline-content {
@@ -457,6 +463,13 @@ body {
     padding: 2rem;
     width: calc(50% - 40px);
     position: relative;
+    transition: all 0.15s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+    border-color: var(--accent-purple);
 }
 
 .timeline-content h3 {
@@ -489,6 +502,13 @@ body {
     gap: 2rem;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.emni h3 {
+    font-weight: normal;
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
 }
 
 .teaching-card {
