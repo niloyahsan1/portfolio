@@ -1,3 +1,17 @@
+// Initialize Lenis Smooth Scroll
+const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    infinite: false,
+});
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
 // DOM Elements
 const navToggle = document.querySelector('.nav-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -5,6 +19,16 @@ const navLinks = document.querySelectorAll('.nav-link');
 const scrollProgress = document.querySelector('.scroll-progress');
 const contactForm = document.getElementById('contact-form');
 const downloadCvBtn = document.getElementById('download-cv');
+const navbar = document.querySelector('.navbar');
+const sections = document.querySelectorAll('section[id]');
+const orbs = document.querySelectorAll('.gradient-orb');
+
+// Typewriter immediately cleared to prevent visual flash on load
+const heroTitle = document.querySelector('.hero-title .text-gradient');
+const originalText = heroTitle ? heroTitle.textContent : '';
+if (heroTitle) {
+    heroTitle.textContent = '';
+}
 
 // Navigation Toggle
 navToggle.addEventListener('click', () => {
@@ -37,19 +61,9 @@ window.addEventListener('scroll', () => {
     scrollProgress.style.width = scrolled + '%';
 });
 
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(10, 14, 39, 0.98)';
-        navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
-    } else {
-        navbar.style.background = 'rgba(10, 14, 39, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
 
-// Smooth scrolling for navigation links
+
+// Smooth scrolling for navigation links via Lenis
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -57,16 +71,12 @@ navLinks.forEach(link => {
         const targetSection = document.querySelector(targetId);
         
         if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 80;
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
+            lenis.scrollTo(targetSection, { offset: -80 });
         }
     });
 });
 
-// Smooth scrolling for CTA buttons
+// Smooth scrolling for CTA buttons via Lenis
 document.querySelectorAll('.btn').forEach(button => {
     if (button.getAttribute('href') && button.getAttribute('href').startsWith('#')) {
         button.addEventListener('click', (e) => {
@@ -75,11 +85,7 @@ document.querySelectorAll('.btn').forEach(button => {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+                lenis.scrollTo(targetSection, { offset: -80 });
             }
         });
     }
@@ -127,14 +133,10 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title .text-gradient');
-    if (heroTitle) {
-        const originalText = heroTitle.textContent;
-        setTimeout(() => {
-            typeWriter(heroTitle, originalText, 80);
-        }, 500);
+// Initialize typing effect when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    if (heroTitle && originalText) {
+        typeWriter(heroTitle, originalText, 45); // Speed up typing for modern feel
     }
 });
 
@@ -289,18 +291,7 @@ function showNotification(message, type = 'info') {
 
 // Download CV functionality
 if (downloadCvBtn) {
-    downloadCvBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        
-        // Create link to actual CV PDF file for direct download
-        const link = document.createElement('a');
-        link.href = './assets/NiloyAhsan_CV.pdf';
-        link.download = 'NiloyAhsan_CV.pdf';
-        link.style.display = 'none';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        
+    downloadCvBtn.addEventListener('click', () => {
         showNotification('CV download started! Check your downloads folder.', 'success');
     });
 }
@@ -308,8 +299,6 @@ if (downloadCvBtn) {
 // Parallax effect for hero orbs
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const orbs = document.querySelectorAll('.gradient-orb');
-    
     orbs.forEach((orb, index) => {
         const speed = 0.5 + (index * 0.1);
         orb.style.transform = `translateY(${scrolled * speed}px)`;
@@ -318,25 +307,12 @@ window.addEventListener('scroll', () => {
 
 // Simple card hover effects are handled in CSS
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.style.opacity = '0';
-    setTimeout(() => {
-        document.body.style.transition = 'opacity 0.5s ease';
-        document.body.style.opacity = '1';
-    }, 100);
-});
-
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
     let current = '';
-    const sections = document.querySelectorAll('section[id]');
-    
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (scrollY >= (sectionTop - 200)) {
+        if (window.scrollY >= (sectionTop - 200)) {
             current = section.getAttribute('id');
         }
     });
@@ -348,18 +324,6 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-
-// Add active link styles
-const style = document.createElement('style');
-style.textContent = `
-    .nav-link.active {
-        color: var(--text-primary) !important;
-    }
-    .nav-link.active::after {
-        width: 100% !important;
-    }
-`;
-document.head.appendChild(style);
 
 // Initialize particles background (optional enhancement)
 function createParticles() {
@@ -392,28 +356,6 @@ function createParticles() {
     }
     
     document.body.appendChild(particlesContainer);
-    
-    // Add animation keyframes
-    const particleStyle = document.createElement('style');
-    particleStyle.textContent = `
-        @keyframes float-particle {
-            0% {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-100vh) translateX(100px);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(particleStyle);
 }
 
 // Initialize particles on load

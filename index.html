@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niloy Ahsan Portfolio</title>
-    <link rel="website icon" type="png" href="./assets/favicon.png">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -31,6 +32,7 @@
                 <li><a href="#research" class="nav-link">Research</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#honors" class="nav-link">Honors</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-toggle">
@@ -40,6 +42,7 @@
             </div>
         </div>
     </nav>
+    <main>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -66,7 +69,7 @@
                         <span>View Projects</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="./assets/NiloyAhsan_CV.pdf" class="btn btn-secondary" id="download-cv">
+                    <a href="./assets/NiloyAhsan_CV.pdf" download="NiloyAhsan_CV.pdf" class="btn btn-secondary" id="download-cv">
                         <span>Download CV</span>
                         <i class="fas fa-download"></i>
                     </a>
@@ -157,7 +160,7 @@
     <section id="teaching" class="section">
         <div class="container">
             <h2 class="section-title">Teaching Experience</h2>
-            <div class="emni">
+            <div class="teaching-duration">
                 <h3>Oct. 2023 - Jan. 2025</h3>
             </div>
             <div class="teaching-grid">
@@ -573,13 +576,13 @@
                     <form id="contact-form" name="contact" method="POST" data-netlify="true">
                         <input type="hidden" name="form-name" value="contact">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" aria-label="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5"
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" aria-label="Your Message"
                                 required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">
@@ -591,6 +594,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -598,20 +602,20 @@
             <div class="footer-content">
                 <p>&copy; 2026 Niloy Ahsan. All rights reserved.</p>
                 <div class="footer-social">
-                    <a href="https://github.com/niloyahsan1" target="_blank" class="social-link">
+                    <a href="https://github.com/niloyahsan1" target="_blank" class="footer-social-link">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/niloyahsan1/" target="_blank" class="social-link">
+                    <a href="https://www.linkedin.com/in/niloyahsan1/" target="_blank" class="footer-social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
                     <a href="https://scholar.google.com/citations?user=6UajKGwAAAAJ&hl=en" target="_blank"
-                        class="social-link">
+                        class="footer-social-link">
                         <i class="fas fa-graduation-cap"></i>
                     </a>
-                    <a href="https://orcid.org/0009-0004-9710-9893" target="_blank" class="social-link">
+                    <a href="https://orcid.org/0009-0004-9710-9893" target="_blank" class="footer-social-link">
                         <i class="fa-brands fa-orcid"></i>
                     </a>
-                    <a href="https://www.youtube.com/@niloyahsan4641" target="_blank" class="social-link">
+                    <a href="https://www.youtube.com/@niloyahsan4641" target="_blank" class="footer-social-link">
                         <i class="fab fa-youtube"></i>
                     </a>
                 </div>
@@ -619,6 +623,7 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <script src="script.js"></script>
 </body>
 
