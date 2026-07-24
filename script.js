@@ -28,13 +28,21 @@ const sections = document.querySelectorAll('section[id]');
 if (navToggle && navMenu) {
     navToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        navMenu.classList.toggle('active');
+        const isActive = navMenu.classList.toggle('active');
+        if (navbar) {
+            if (isActive) {
+                navbar.classList.add('menu-open');
+            } else {
+                navbar.classList.remove('menu-open');
+            }
+        }
     });
 
     // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && e.target !== navToggle) {
             navMenu.classList.remove('active');
+            if (navbar) navbar.classList.remove('menu-open');
         }
     });
 }
@@ -43,6 +51,7 @@ if (navToggle && navMenu) {
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (navMenu) navMenu.classList.remove('active');
+        if (navbar) navbar.classList.remove('menu-open');
     });
 });
 
@@ -99,13 +108,22 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards for animations
-document.querySelectorAll('.section, .timeline-node, .work-card, .credentials-block').forEach(element => {
+document.querySelectorAll('.section, .timeline-node, .work-card').forEach(element => {
     element.classList.add('fade-in');
     revealObserver.observe(element);
 });
 
-// --- Active Navbar Highlights ---
+// --- Active Navbar Highlights & Navbar Scroll State ---
 window.addEventListener('scroll', () => {
+    // Toggle scrolled state on navbar
+    if (navbar) {
+        if (window.scrollY > 20) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    }
+
     let currentSectionId = '';
     const scrollPos = window.scrollY + 150; // offset for trigger
 
@@ -261,3 +279,67 @@ if (downloadCvBtn) {
         showNotification('CV download started! Check your downloads folder.', 'success');
     });
 }
+
+// --- Upward Floating Particle System ---
+function createParticles() {
+    const particlesContainer = document.createElement('div');
+    particlesContainer.className = 'particles-container';
+    particlesContainer.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+    `;
+    
+    const themeColors = ['#4f46e5', '#38bdf8', '#818cf8'];
+
+    for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        const randomColor = themeColors[Math.floor(Math.random() * themeColors.length)];
+        const size = Math.random() * 3.5 + 1;
+        
+        particle.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            background: ${randomColor};
+            opacity: ${Math.random() * 0.45 + 0.15};
+            border-radius: 50%;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation: float-particle ${Math.random() * 12 + 10}s linear infinite;
+        `;
+        particlesContainer.appendChild(particle);
+    }
+    
+    document.body.appendChild(particlesContainer);
+    
+    // Inject floating keyframes
+    const particleStyle = document.createElement('style');
+    particleStyle.textContent = `
+        @keyframes float-particle {
+            0% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(80px);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(particleStyle);
+}
+
+// Initialize particles
+createParticles();
