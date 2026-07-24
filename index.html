@@ -94,33 +94,9 @@
                     </div>
                 </div>
                 <div class="hero-content-right">
-                    <!-- Premium Code Window mockup -->
-                    <div class="code-window">
-                        <div class="code-header">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                            <span class="code-title">quantum_model.py</span>
-                        </div>
-                        <div class="code-body">
-                            <pre><code><span class="keyword">import</span> pennylane <span class="keyword">as</span> qml
-<span class="keyword">from</span> tensorflow <span class="keyword">import</span> keras
-
-<span class="comment"># Quantum Device Initialization</span>
-dev = qml.device(<span class="string">"default.qubit"</span>, wires=<span class="number">4</span>)
-
-<span class="keyword">@qml.qnode</span>(dev)
-<span class="keyword">def</span> <span class="function">quantum_layer</span>(inputs, weights):
-    qml.AngleEmbedding(inputs, wires=range(<span class="number">4</span>))
-    qml.BasicEntanglerLayers(weights, wires=range(<span class="number">4</span>))
-    <span class="keyword">return</span> [qml.expval(qml.PauliZ(i)) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>)]
-
-<span class="comment"># Hybrid Quantum-Classical Deep Learning</span>
-model = keras.Sequential([
-    keras.layers.Dense(<span class="number">128</span>, activation=<span class="string">'relu'</span>),
-    qml.qnn.KerasLayer(quantum_layer, output_dim=<span class="number">4</span>),
-    keras.layers.Dense(<span class="number">2</span>, activation=<span class="string">'softmax'</span>)
-])</code></pre>
+                    <div class="profile-image-container">
+                        <div class="profile-image-wrapper">
+                            <img src="./assets/profile.jpg" alt="Niloy Ahsan" class="profile-img">
                         </div>
                     </div>
                 </div>
