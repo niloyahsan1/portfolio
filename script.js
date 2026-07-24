@@ -215,11 +215,14 @@ function showNotification(message, type = 'info') {
         position: fixed;
         bottom: 30px;
         right: 30px;
-        background: ${type === 'success' ? 'linear-gradient(135deg, #10b981, #059669)' : type === 'error' ? 'linear-gradient(135deg, #ef4444, #dc2626)' : 'linear-gradient(135deg, #4f46e5, #4338ca)'};
-        color: white;
-        padding: 1.1rem 1.6rem;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        background: rgba(30, 41, 59, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        color: #f8fafc;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        border: 1px solid ${type === 'success' ? 'rgba(16, 185, 129, 0.35)' : type === 'error' ? 'rgba(239, 68, 68, 0.35)' : 'rgba(79, 70, 229, 0.35)'};
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), ${type === 'success' ? '0 0 20px rgba(16, 185, 129, 0.15)' : type === 'error' ? '0 0 20px rgba(239, 68, 68, 0.15)' : '0 0 20px rgba(79, 70, 229, 0.15)'};
         z-index: 10000;
         display: flex;
         align-items: center;
@@ -234,6 +237,12 @@ function showNotification(message, type = 'info') {
 
     const content = notification.querySelector('.notification-content');
     content.style.cssText = 'display: flex; align-items: center; gap: 0.85rem; font-weight: 500; font-size: 0.95rem;';
+
+    const icon = notification.querySelector('.notification-content i');
+    if (icon) {
+        icon.style.color = type === 'success' ? '#10b981' : type === 'error' ? '#ef4444' : '#818cf8';
+        icon.style.fontSize = '1.15rem';
+    }
 
     const closeBtn = notification.querySelector('.notification-close');
     closeBtn.style.cssText = 'background: none; border: none; color: rgba(255,255,255,0.7); cursor: pointer; font-size: 1rem; padding: 0.25rem; border-radius: 6px; transition: all 0.2s;';
