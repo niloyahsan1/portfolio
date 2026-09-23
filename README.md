@@ -1,18 +1,13 @@
-# 🌐 Portfolio Website
+# Portfolio Website
 
 ## Welcome to my **personal portfolio website**!
-This project showcases my skills, projects, and experiences as a developer, designed to provide a clean and modern interface for visitors to learn more about me.
+This website showcases my skills, projects, and experiences as a developer, designed to provide a clean and modern interface for visitors to learn more about me.
 
-## 🚀 Live Demo
-Check out the deployed portfolio here: [Portfolio](https://niloyahsan.netlify.app)
+## Live Website
+Check out the deployed portfolio here: [_niloyahsan.is-a.dev_](https://niloyahsan.is-a.dev/)
 
-## 📸 Demo Screenshot
-<p align="center">
-  <img src="./assets/demo.png" width="800" />
-</p>
-
-## 📂 Project Structure
-```
+## Project Structure
+```text
 ├── index.html
 ├── styles.css
 ├── script.js
@@ -20,20 +15,16 @@ Check out the deployed portfolio here: [Portfolio](https://niloyahsan.netlify.ap
 └── README.md
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 - **HTML5** – Semantic structure  
 - **CSS3** – Styling and responsive design  
 - **JavaScript** – Interactivity and dynamic elements  
 
-## ✨ Features
+## Features
 - Responsive design for mobile and desktop  
 - Smooth navigation and interactive UI  
 - Sections for **About Me, Projects, Skills, and Contact**  
 - Deployed on **Netlify** for easy access  
 
-## 📬 Contact
-Created by **Niloy Ahsan**  
-- GitHub: [@niloyahsan1](https://github.com/niloyahsan1)  
-- Portfolio: [niloyahsan](https://niloyahsan.netlify.app)
-
----
+## Created by
+- [Niloy Ahsan](https://www.linkedin.com/in/niloyahsan1/)
