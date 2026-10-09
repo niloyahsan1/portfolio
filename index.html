@@ -21,9 +21,6 @@
 </head>
 
 <body>
-    <!-- Scroll Progress Indicator -->
-    <div class="scroll-progress"></div>
-
     <!-- Background Dotted Grid & Ambient Glows -->
     <div class="grid-backdrop"></div>
     <div class="ambient-glow orb-1"></div>
@@ -38,7 +35,9 @@
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#certificates" class="nav-link">Certifications</a></li>
+                <li><a href="#leadership" class="nav-link">Leadership</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle menu">
@@ -54,13 +53,14 @@
         <section id="home" class="hero">
             <div class="container hero-container-grid">
                 <div class="hero-content-left">
-                    <h1 class="hero-title">Niloy Ahsan</h1>
-                    <p class="hero-subtitle">Fullstack Developer • Software Engineer • Researcher</p>
-                    <p class="hero-tagline">
+                    <h1 class="hero-title animate-reveal">Niloy Ahsan</h1>
+                    <p class="hero-subtitle animate-reveal delay-1">Fullstack Developer • Software Engineer • Researcher
+                    </p>
+                    <p class="hero-tagline animate-reveal delay-2">
                         Building intelligent systems at the intersection of data, research, and software engineering.
                         Specializing in Deep Learning, SDN networks, and Quantum Machine Learning.
                     </p>
-                    <div class="hero-cta">
+                    <div class="hero-cta animate-reveal delay-3">
                         <a href="#projects" class="btn btn-primary">
                             <span>View Projects</span>
                             <i class="fas fa-arrow-right"></i>
@@ -71,8 +71,9 @@
                             <i class="fas fa-download"></i>
                         </a>
                     </div>
-                    <div class="hero-social">
-                        <a href="https://github.com/niloyahsan1" target="_blank" class="social-link" aria-label="GitHub">
+                    <div class="hero-social animate-reveal delay-4">
+                        <a href="https://github.com/niloyahsan1" target="_blank" class="social-link"
+                            aria-label="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                         <a href="https://www.linkedin.com/in/niloyahsan1/" target="_blank" class="social-link"
@@ -94,7 +95,7 @@
                     </div>
                 </div>
                 <div class="hero-content-right">
-                    <div class="profile-image-container">
+                    <div class="profile-image-container animate-scale-fade delay-2">
                         <div class="profile-image-wrapper">
                             <img src="./assets/profile.jpg" alt="Niloy Ahsan" class="profile-img">
                         </div>
@@ -174,12 +175,13 @@
                 <div class="timeline">
                     <!-- MSc -->
                     <div class="timeline-node">
+                        <div class="timeline-date">
+                            <span class="timeline-year">2025</span>
+                            <span class="timeline-month">Oct. - Present</span>
+                        </div>
                         <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <span class="card-date">Oct. 2025 - Present</span>
-                                <h3>Master of Science in CSE</h3>
-                            </div>
+                        <div class="timeline-content">
+                            <h3>Master of Science in CSE</h3>
                             <p class="card-institution">BRAC University</p>
                             <p class="card-text">Specializing in Data Science. Researching advanced machine learning
                                 architectures, high-performance database design, and cloud analytics platforms.</p>
@@ -187,12 +189,13 @@
                     </div>
                     <!-- Merged TA CSE & Math -->
                     <div class="timeline-node">
+                        <div class="timeline-date">
+                            <span class="timeline-year">2023</span>
+                            <span class="timeline-month">Oct. - Jan. 2025</span>
+                        </div>
                         <div class="timeline-dot"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <span class="card-date">Oct. 2023 - Jan. 2025</span>
-                                <h3>Undergraduate Teaching Assistant</h3>
-                            </div>
+                        <div class="timeline-content">
+                            <h3>Undergraduate Teaching Assistant</h3>
                             <p class="card-institution">BRAC University</p>
                             <ul class="card-bullets">
                                 <li><strong>CSE Department:</strong> Assisted in Java Programming I (CSE110) &
@@ -206,12 +209,13 @@
                     </div>
                     <!-- BSc -->
                     <div class="timeline-node">
+                        <div class="timeline-date">
+                            <span class="timeline-year">2021</span>
+                            <span class="timeline-month">Feb. - Feb. 2025</span>
+                        </div>
                         <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <span class="card-date">Feb. 2021 - Feb. 2025</span>
-                                <h3>Bachelor of Science in CSE</h3>
-                            </div>
+                        <div class="timeline-content">
+                            <h3>Bachelor of Science in CSE</h3>
                             <p class="card-institution">BRAC University</p>
                             <p class="card-text">Graduated with High Distinction. GPA: 3.72 / 4.00.</p>
                             <ul class="card-bullets">
@@ -232,124 +236,452 @@
                 <h2 class="section-title">Software Engineering Projects</h2>
                 <div class="grid-2">
                     <!-- Project 1 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <h3>Healthy Habits Diet Planner</h3>
+                    <div class="project-card-premium">
+                        <div class="project-card-header">
+                            <i class="fas fa-robot project-card-icon"></i>
                             <div class="tech-tags">
-                                <span class="tag">Laravel</span>
-                                <span class="tag">MySQL</span>
+                                <span class="tag">Python</span>
+                                <span class="tag">LangChain</span>
+                                <span class="tag">FAISS</span>
                             </div>
                         </div>
-                        <p class="work-desc">Interactive MVC web system offering customized caloric planners, nutrition
-                            charts, and medical anomaly tracking with automated email reminders.</p>
-                        <a href="https://github.com/niloyahsan1/CSE470_Niloy" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
+                        <h3>RAG-based Medical Chatbot</h3>
+                        <p>Intelligent context-aware medical QA assistant using LangChain. Processes PDF documents into
+                            vector embeddings stored in a FAISS vector database for semantic retrieval.</p>
+                        <a href="https://github.com/niloyahsan1" target="_blank" class="project-card-link">
+                            <span>View Source Code</span>
+                            <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
+
                     <!-- Project 2 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <h3>BRACU Research Hub</h3>
+                    <div class="project-card-premium">
+                        <div class="project-card-header">
+                            <i class="fas fa-graduation-cap project-card-icon"></i>
                             <div class="tech-tags">
                                 <span class="tag">Laravel</span>
                                 <span class="tag">MySQL</span>
+                                <span class="tag">PHP</span>
                             </div>
                         </div>
-                        <p class="work-desc">Comprehensive research catalog database allowing university professors,
-                            labs, and graduates to list publications, form teams, and share datasets.</p>
+                        <h3>BRACU Research Hub</h3>
+                        <p>Comprehensive database system allowing professors, labs, and graduates to list publications,
+                            form teams, and share research datasets.</p>
                         <a href="https://github.com/niloyahsan1/BRACU_research_hub" target="_blank"
-                            class="project-link">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
+                            class="project-card-link">
+                            <span>View Source Code</span>
+                            <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
+
                     <!-- Project 3 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <h3>Heart Disease Prediction System</h3>
+                    <div class="project-card-premium">
+                        <div class="project-card-header">
+                            <i class="fas fa-apple-alt project-card-icon"></i>
                             <div class="tech-tags">
-                                <span class="tag">Python</span>
-                                <span class="tag">Scikit-learn</span>
+                                <span class="tag">Laravel</span>
+                                <span class="tag">MySQL</span>
+                                <span class="tag">PHP</span>
                             </div>
                         </div>
-                        <p class="work-desc">Intelligent diagnostic framework applying random forest and support vector
-                            classification models to predict 10-year coronary cardiac risk indices.</p>
-                        <a href="https://github.com/niloyahsan1/Heart-Disease-Prediction-ML-Project" target="_blank"
-                            class="project-link">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
+                        <h3>Healthy Habits Diet Planner</h3>
+                        <p>Interactive MVC web system offering customized caloric planners, nutrition charts, and
+                            medical anomaly tracking with automated email reminders.</p>
+                        <a href="https://github.com/niloyahsan1/CSE470_Niloy" target="_blank" class="project-card-link">
+                            <span>View Source Code</span>
+                            <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
+
                     <!-- Project 4 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <h3>Diabetes Analytics Prediction</h3>
+                    <div class="project-card-premium">
+                        <div class="project-card-header">
+                            <i class="fas fa-heartbeat project-card-icon"></i>
                             <div class="tech-tags">
-                                <span class="tag">Python</span>
+                                <span class="tag">Scikit-learn</span>
                                 <span class="tag">Pandas</span>
+                                <span class="tag">NumPy</span>
                             </div>
                         </div>
-                        <p class="work-desc">Descriptive statistics pipeline validating patient records to train
-                            high-accuracy gradient boosting classification models for diabetes prediction.</p>
+                        <h3>Diabetes Analytics Prediction</h3>
+                        <p>ML analytics pipeline validating patient health records to train high-accuracy classification
+                            models predicting diabetes risk indices.</p>
                         <a href="https://github.com/niloyahsan1/Diabetes-Prediction-ML-Project" target="_blank"
-                            class="project-link">
-                            <i class="fab fa-github"></i>
-                            <span>View Code</span>
+                            class="project-card-link">
+                            <span>View Source Code</span>
+                            <i class="fas fa-arrow-right"></i>
                         </a>
+                    </div>
+                </div>
+
+                <!-- Collapsible Grid for Additional Projects -->
+                <div class="projects-collapse">
+                    <div class="grid-2" style="margin-top: 2.25rem;">
+                        <!-- Project 5 -->
+                        <div class="project-card-premium">
+                            <div class="project-card-header">
+                                <i class="fas fa-universal-access project-card-icon"></i>
+                                <div class="tech-tags">
+                                    <span class="tag">Flutter</span>
+                                    <span class="tag">Dart</span>
+                                    <span class="tag">JS</span>
+                                </div>
+                            </div>
+                            <h3>Nirapod Shobdo (Website & App)</h3>
+                            <p>Accessibility-focused web platform and Android app enabling persons with disabilities to
+                                report rights violations and file legal complaints through an inclusive UI.</p>
+                            <a href="https://github.com/niloyahsan1" target="_blank" class="project-card-link">
+                                <span>View Source Code</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <!-- Project 6 -->
+                        <div class="project-card-premium">
+                            <div class="project-card-header">
+                                <i class="fas fa-language project-card-icon"></i>
+                                <div class="tech-tags">
+                                    <span class="tag">TensorFlow</span>
+                                    <span class="tag">Python</span>
+                                    <span class="tag">XAI</span>
+                                </div>
+                            </div>
+                            <h3>Handwritten Bangla Name Recognition</h3>
+                            <p>Deep learning classifier for handwritten Bangla names utilizing ResNet50 (achieving
+                                83.89% accuracy) alongside XAI techniques for model interpretability.</p>
+                            <a href="https://github.com/niloyahsan1" target="_blank" class="project-card-link">
+                                <span>View Source Code</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <!-- Project 7 -->
+                        <div class="project-card-premium">
+                            <div class="project-card-header">
+                                <i class="fas fa-boxes project-card-icon"></i>
+                                <div class="tech-tags">
+                                    <span class="tag">Laravel</span>
+                                    <span class="tag">PHP</span>
+                                    <span class="tag">MySQL</span>
+                                </div>
+                            </div>
+                            <h3>Inventory Management Dashboard</h3>
+                            <p>Full-featured management platform for stock and product records, featuring business
+                                metrics reporting and automated data tracking for operational needs.</p>
+                            <a href="https://github.com/niloyahsan1" target="_blank" class="project-card-link">
+                                <span>View Source Code</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <!-- Project 8 -->
+                        <div class="project-card-premium">
+                            <div class="project-card-header">
+                                <i class="fas fa-stethoscope project-card-icon"></i>
+                                <div class="tech-tags">
+                                    <span class="tag">Scikit-learn</span>
+                                    <span class="tag">Pandas</span>
+                                    <span class="tag">NumPy</span>
+                                </div>
+                            </div>
+                            <h3>Heart Disease Prediction System</h3>
+                            <p>Intelligent diagnostic framework applying random forest and support vector classification
+                                models to predict 10-year coronary cardiac risk indices.</p>
+                            <a href="https://github.com/niloyahsan1/Heart-Disease-Prediction-ML-Project" target="_blank"
+                                class="project-card-link">
+                                <span>View Source Code</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toggle Trigger -->
+                <div class="projects-toggle-container">
+                    <button id="toggle-projects-btn" class="btn btn-secondary">
+                        <span>Show More Projects</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research & Publications Section -->
+        <section id="research" class="section border-top">
+            <div class="container">
+                <h2 class="section-title">Research & Publications</h2>
+
+                <!-- Publications Subsection -->
+                <div class="work-block">
+                    <h3 class="work-subtitle"><i class="fas fa-book-reader"></i> Publications</h3>
+                    <div class="research-list">
+
+                        <!-- Publication 1 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge publication">Conference Paper</span>
+                                <span class="research-year">2025</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">Quantum-Enhanced Tax Revenue via A-Challan: ML, LLMs, and QML
+                                    Approaches</h4>
+                                <p class="research-authors">Tashick, M. J., Dass, A., Saha, S., <strong>Ahsan,
+                                        N.</strong>, Mashrafi, A., Akuthota, V., Ashraf, M. S., Anwar, A. S., Saad, S.
+                                    B., & Reza, M. T.</p>
+                                <p class="research-venue">In <em>2025 IEEE International Women in Engineering (WIE)
+                                        Conference on Electrical and Computer Engineering (WIECON-ECE)</em>. IEEE, pp.
+                                    49–54.</p>
+                                <p class="research-summary">Research applying quantum-enhanced neural architectures to
+                                    optimize challan validations and tax auditing anomalies.</p>
+                                <div class="research-links">
+                                    <a href="https://doi.org" target="_blank" class="research-link"><i
+                                            class="fas fa-external-link-alt"></i> DOI Link</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Publication 2 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge publication">Bachelor's Thesis</span>
+                                <span class="research-year">2025</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">An SDN-based Approach Using RYU Controller for Load Balancing
+                                    and Performance Evaluation in Hybrid Networks with Machine Learning Algorithms</h4>
+                                <p class="research-authors">Ghosh, C. R., <strong>Ahsan, N.</strong>, Islam, M., Noor,
+                                    R., & Mashrafi, A.</p>
+                                <p class="research-venue">Bachelor's Thesis, Department of Computer Science and
+                                    Engineering, BRAC University.</p>
+                                <p class="research-summary">An SDN-based RYU Controller approach for load balancing and
+                                    performance evaluation in hybrid networks with ML algorithms.</p>
+                                <div class="research-links">
+                                    <a href="https://doi.org" target="_blank" class="research-link"><i
+                                            class="fas fa-external-link-alt"></i> DOI Link</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Preprints & Ongoing Research Subsection -->
+                <div class="work-block margin-top-large">
+                    <h3 class="work-subtitle"><i class="fas fa-scroll"></i> Preprints & Active Research</h3>
+                    <div class="research-list">
+
+                        <!-- Preprint 1 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge preprint">Preprint</span>
+                                <span class="research-year">2025</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">Being Heard Without Being Connected: Emotional Dependence on
+                                    AI Chatbots and Its Effects on Mental Health among University Students in Bangladesh
+                                </h4>
+                                <p class="research-authors"><strong>Ahsan, N.</strong>, et al.</p>
+                                <p class="research-venue">Fields: HCI, AI Ethics, Mental Health Informatics.</p>
+                                <p class="research-summary">Investigating emotional dependence on AI chatbots and its
+                                    effects on mental health among university students in Bangladesh.</p>
+                                <div class="research-links">
+                                    <a href="#" class="research-link"><i class="far fa-file-pdf"></i> Preprint Paper</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preprint 2 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge preprint">Preprint</span>
+                                <span class="research-year">2025</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">Robust Handwritten Bangla Human Name Recognition Using Deep
+                                    Learning, Ensemble Models and Explainable AI</h4>
+                                <p class="research-authors"><strong>Ahsan, N.</strong>, et al.</p>
+                                <p class="research-venue">Fields: Computer Vision, Deep Learning, Explainable AI.</p>
+                                <p class="research-summary">Developing a robust Deep Learning and Ensemble framework for
+                                    handwritten Bangla name recognition with Grad-CAM and LIME for interpretability.</p>
+                                <div class="research-links">
+                                    <a href="#" class="research-link"><i class="far fa-file-pdf"></i> Preprint Paper</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preprint 3 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge preprint">Preprint</span>
+                                <span class="research-year">2025</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">Time-Sliced Round Robin (TSRR) Scheduling for Flow-Aware Load
+                                    Balancing in Software Defined Networks</h4>
+                                <p class="research-authors"><strong>Ahsan, N.</strong>, et al.</p>
+                                <p class="research-venue">Fields: SDN, Network Optimization, Machine Learning.</p>
+                                <p class="research-summary">Developing flow-aware load balancing scheduler (TSRR) to
+                                    optimize traffic load balancing in Software Defined Networks.</p>
+                                <div class="research-links">
+                                    <a href="#" class="research-link"><i class="far fa-file-pdf"></i> Preprint Paper</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Preprint 4 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge completed">Completed Analysis</span>
+                                <span class="research-year">2023</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">Data Searching On Cloud Storage: A Comparative Analysis</h4>
+                                <p class="research-authors"><strong>Ahsan, N.</strong>, et al.</p>
+                                <p class="research-venue">Fields: Cloud Computing / Cloud Storage Systems.</p>
+                                <p class="research-summary">Comparative analysis of parallel search protocols and
+                                    distributed indexing structures inside cloud storage systems.</p>
+                                <div class="research-links">
+                                    <a href="#" class="research-link"><i class="far fa-file-pdf"></i> Preprint Paper</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Academic Service & Presentations Subsection -->
+                <div class="work-block margin-top-large">
+                    <h3 class="work-subtitle"><i class="fas fa-chalkboard-teacher"></i> Academic Service & Posters</h3>
+                    <div class="research-list">
+
+                        <!-- Service 1 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge service">Journal Service</span>
+                                <span class="research-year">2026</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">Peer Reviewer for Future Generation Computer Systems (FGCS)
+                                </h4>
+                                <p class="research-authors">Elsevier Journal</p>
+                                <p class="research-venue">Evaluating incoming papers and manuscripts on high-performance
+                                    cloud networks, grid databases, and machine learning pipelines.</p>
+                                <div class="research-links">
+                                    <a href="https://www.sciencedirect.com/journal/future-generation-computer-systems"
+                                        target="_blank" class="research-link"><i class="fas fa-certificate"></i> View
+                                        Journal</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Presentation 1 -->
+                        <div class="research-item">
+                            <div class="research-meta">
+                                <span class="research-badge poster">Poster Presentation</span>
+                                <span class="research-year">2024</span>
+                            </div>
+                            <div class="research-details">
+                                <h4 class="research-title">Enhancing Hybrid Network Efficiency: An SDN-Based Approach to
+                                    Load Balancing and Performance Evaluation</h4>
+                                <p class="research-authors">Ghosh, C. R., <strong>Ahsan, N.</strong>, Islam, M., Noor,
+                                    R., & Mashrafi, A.</p>
+                                <p class="research-venue">Poster presented at the <em>11th International Conference on
+                                        Networked Systems (NSysS 2024)</em>, Dhaka, Bangladesh.</p>
+                                <div class="research-links">
+                                    <a href="#" class="research-link"><i class="far fa-image"></i> View Poster</a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research Work Section -->
-        <section id="research" class="section border-top">
+
+
+        <!-- Leadership & Impact Section -->
+        <section id="leadership" class="section border-top">
             <div class="container">
-                <h2 class="section-title">Research Publications</h2>
+                <h2 class="section-title">Leadership & Impact</h2>
                 <div class="grid-2">
-                    <!-- Research 1 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <span class="status-badge accepted">Accepted</span>
-                            <h3>Quantum-Enhanced Tax Revenue via A-Challan</h3>
+                    <!-- Column 1: Social Initiatives -->
+                    <div class="impact-column">
+                        <h3 class="impact-column-title"><i class="fas fa-hand-holding-heart"></i> Co-Founded Initiatives
+                        </h3>
+
+                        <!-- Initiative 1 -->
+                        <div class="impact-card">
+                            <div class="impact-card-header">
+                                <h4>MonBritto</h4>
+                                <span class="card-date">Jun. 2026 - Present</span>
+                            </div>
+                            <p class="impact-role">Co-Founder</p>
+                            <p class="impact-desc">A mental health initiative focused on improving mental health
+                                literacy and emotional well-being among school students in Bangladesh.</p>
                         </div>
-                        <p class="work-fields">Quantum ML • Tax Systems</p>
-                        <p class="work-desc">Research applying quantum-enhanced neural architectures to optimize challan
-                            validations and tax auditing anomalies for automated treasury systems.</p>
-                        <span class="work-date">Dec. 2025</span>
+
+                        <!-- Initiative 2 -->
+                        <div class="impact-card">
+                            <div class="impact-card-header">
+                                <h4>Nirapod Shobdo</h4>
+                                <span class="card-date">Nov. 2025 - Present</span>
+                            </div>
+                            <p class="impact-role">Co-Founder & Lead Developer</p>
+                            <p class="impact-desc">An initiative aimed at making legal rights more accessible to persons
+                                with disabilities and promoting inclusive access to justice through technical platforms.
+                            </p>
+                        </div>
+
+                        <!-- Initiative 3 -->
+                        <div class="impact-card">
+                            <div class="impact-card-header">
+                                <h4>Team Shunte Chai</h4>
+                                <span class="card-date">Oct. 2025 - Present</span>
+                            </div>
+                            <p class="impact-role">Co-Founder & Communications Coordinator</p>
+                            <p class="impact-desc">A youth-led organization promoting mental health awareness, advocacy,
+                                and emotional support networks for university students.</p>
+                        </div>
                     </div>
-                    <!-- Research 2 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <span class="status-badge preprint">Preprint</span>
-                            <h3>Adaptive SDN Load Balancing with ML</h3>
+
+                    <!-- Column 2: Extracurriculars & Volunteering -->
+                    <div class="impact-column">
+                        <h3 class="impact-column-title"><i class="fas fa-users"></i> Clubs & Volunteering</h3>
+
+                        <!-- Club Activity -->
+                        <div class="impact-card">
+                            <div class="impact-card-header">
+                                <h4>BRAC University Communication & Language Club</h4>
+                                <span class="card-date">Mar. 2024 - Jul. 2025</span>
+                            </div>
+                            <p class="impact-role">Senior Executive – IT & Marketing Department</p>
+                            <p class="impact-desc">Managed digital branding strategies, technical setups, and marketing
+                                campaigns for university events. Collaborated with executives to coordinate events.</p>
                         </div>
-                        <p class="work-fields">Software-Defined Networks • Machine Learning</p>
-                        <p class="work-desc">Development of dynamic network load balancing systems in SDN routing
-                            controllers utilizing reinforcement learning to minimize latency and packet drops.</p>
-                        <span class="work-date">2025</span>
-                    </div>
-                    <!-- Research 3 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <span class="status-badge poster">Poster Presentation</span>
-                            <h3>NSysS 2024 Network Security Poster</h3>
+
+                        <!-- Convocation Volunteer -->
+                        <div class="impact-card">
+                            <div class="impact-card-header">
+                                <h4>BRAC University 16th Convocation</h4>
+                                <span class="card-date">2025</span>
+                            </div>
+                            <p class="impact-role">Event Volunteer</p>
+                            <p class="impact-desc">Assisted in crowd management, coordinate guest logistics, and support
+                                administrative operations for the graduation ceremony.</p>
                         </div>
-                        <p class="work-fields">Network Systems • Network Security</p>
-                        <p class="work-desc">Presented research findings on cryptographic safety layers and secure flow
-                            validation in next-gen software networks at the NSysS international conference.</p>
-                        <span class="work-date">2024</span>
-                    </div>
-                    <!-- Research 4 -->
-                    <div class="work-card">
-                        <div class="work-header">
-                            <span class="status-badge completed">Completed</span>
-                            <h3>Cloud Storage Data Searching Analysis</h3>
+
+                        <!-- Speakathon Volunteer -->
+                        <div class="impact-card">
+                            <div class="impact-card-header">
+                                <h4>Speakathon & International Conferences</h4>
+                                <span class="card-date">2024</span>
+                            </div>
+                            <p class="impact-role">Volunteer Coordinator</p>
+                            <p class="impact-desc">Volunteered at Speakathon (public speaking competition) and the
+                                International Conference on "Language Metamorphosis" hosted by BRAC Institute of
+                                Languages.</p>
                         </div>
-                        <p class="work-fields">Cloud Computing • Distributed Systems</p>
-                        <p class="work-desc">Comprehensive analysis and algorithm refinement of parallel search
-                            protocols and distributed file indices inside cloud storage clusters.</p>
-                        <span class="work-date">2024</span>
                     </div>
                 </div>
             </div>

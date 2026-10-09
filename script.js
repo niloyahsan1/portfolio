@@ -69,11 +69,13 @@ window.addEventListener('scroll', () => {
 // --- Anchor Link Scrolling via Lenis ---
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.preventDefault();
         const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-            lenis.scrollTo(targetSection, { offset: -90 });
+        if (targetId && targetId.startsWith('#')) {
+            e.preventDefault();
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                lenis.scrollTo(targetSection, { offset: -90 });
+            }
         }
     });
 });
@@ -108,7 +110,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards for animations
-document.querySelectorAll('.section, .timeline-node, .work-card').forEach(element => {
+document.querySelectorAll('.section, .timeline-node, .work-card, .impact-card, .service-card').forEach(element => {
     element.classList.add('fade-in');
     revealObserver.observe(element);
 });
@@ -124,6 +126,18 @@ window.addEventListener('scroll', () => {
         }
     }
 
+    // Highlight "Services" if on the services page
+    if (window.location.pathname.includes('services.html')) {
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === 'services.html') {
+                link.classList.add('active');
+            } else {
+                link.classList.remove('active');
+            }
+        });
+        return;
+    }
+
     let currentSectionId = '';
     const scrollPos = window.scrollY + 150; // offset for trigger
 
@@ -137,7 +151,7 @@ window.addEventListener('scroll', () => {
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === currentSectionId) {
+        if (link.getAttribute('href').startsWith('#') && link.getAttribute('href').slice(1) === currentSectionId) {
             link.classList.add('active');
         }
     });
@@ -352,3 +366,54 @@ function createParticles() {
 
 // Initialize particles
 createParticles();
+
+// --- Projects Section Expand/Collapse ---
+const toggleProjectsBtn = document.getElementById('toggle-projects-btn');
+const projectsCollapse = document.querySelector('.projects-collapse');
+
+if (toggleProjectsBtn && projectsCollapse) {
+    toggleProjectsBtn.addEventListener('click', () => {
+        const isExpanded = projectsCollapse.classList.toggle('expanded');
+        
+        // Update button text and icon
+        const btnText = toggleProjectsBtn.querySelector('span');
+        const btnIcon = toggleProjectsBtn.querySelector('i');
+        
+        if (isExpanded) {
+            btnText.textContent = 'Show Less Projects';
+            btnIcon.className = 'fas fa-chevron-up';
+            // Scroll to show the newly expanded section
+            setTimeout(() => {
+                lenis.scrollTo(projectsCollapse, { offset: -90 });
+            }, 300);
+        } else {
+            btnText.textContent = 'Show More Projects';
+            btnIcon.className = 'fas fa-chevron-down';
+            // Scroll back to the main projects section header
+            const projectsHeader = document.querySelector('#projects');
+            if (projectsHeader) {
+                lenis.scrollTo(projectsHeader, { offset: -90 });
+            }
+        }
+    });
+}
+
+// --- Service Links Smooth Scroll and Expand ---
+const viewSamplesBtn = document.querySelector('a[href="#projects"].btn-secondary');
+if (viewSamplesBtn) {
+    viewSamplesBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const projectsSection = document.querySelector('#projects');
+        if (projectsSection) {
+            // Scroll to projects
+            lenis.scrollTo(projectsSection, { offset: -90 });
+            
+            // Expand projects collapse if not already expanded
+            if (projectsCollapse && !projectsCollapse.classList.contains('expanded')) {
+                setTimeout(() => {
+                    toggleProjectsBtn.click();
+                }, 400); // Wait for scroll animation to proceed
+            }
+        }
+    });
+}
