@@ -110,7 +110,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards for animations
-document.querySelectorAll('.section, .timeline-node, .work-card, .impact-card, .service-card').forEach(element => {
+document.querySelectorAll('.section, .timeline-node, .work-card, .impact-card, .service-card, .showcase-card').forEach(element => {
     element.classList.add('fade-in');
     revealObserver.observe(element);
 });

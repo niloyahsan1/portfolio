@@ -11,7 +11,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- FontAwesome v6 & Lenis CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -47,66 +49,554 @@
     </nav>
 
     <main>
-        <!-- Services Section Page -->
-        <section id="services-page" class="section hero" style="min-height: 85vh; padding-top: 160px; padding-bottom: 80px;">
+        <!-- Services & Solutions Section -->
+        <section id="services-page" class="section hero"
+            style="min-height: 85vh; padding-top: 140px; padding-bottom: 80px;">
             <div class="container">
-                <h1 class="hero-title text-center animate-reveal" style="text-align: center; font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem;">My Services & Solutions</h1>
-                <p class="paragraph text-center animate-reveal delay-1" style="text-align: center; max-width: 780px; margin: 0 auto 4rem auto; font-size: 1.15rem; line-height: 1.8;">
-                    I design responsive frontends, construct scalable database schemas, integrate automated LLM pipelines, and audit software network routing. Here are the core services I provide.
-                </p>
+                <!-- Main Header Intro -->
+                <div class="animate-reveal" style="text-align: center; max-width: 860px; margin: 0 auto 3.5rem auto;">
+                    <span
+                        style="font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-light); margin-bottom: 0.75rem; display: inline-block;">
+                        Full-Stack & Frontend Engineering
+                    </span>
+                    <h1 class="hero-title text-center"
+                        style="font-size: clamp(2.4rem, 5.5vw, 4rem); margin-bottom: 1.25rem;">
+                        My Services & Solutions
+                    </h1>
+                    <p class="paragraph text-center"
+                        style="font-size: 1.12rem; line-height: 1.8; color: var(--text-secondary);">
+                        I build responsive frontends, scalable backend databases, integrate custom AI/LLM pipelines, and
+                        deploy robust web applications with production-level performance.
+                    </p>
+                </div>
 
-                <div class="grid-3 services-grid animate-reveal delay-2">
-                    <!-- Service 1 -->
+                <!-- 1. Services & Capabilities Grid (FIRST) -->
+                <div class="grid-3 animate-reveal delay-1">
+                    <!-- Service 1: Combined Full-Stack Web Development -->
                     <div class="service-card">
                         <div>
                             <div class="service-icon-wrapper">
-                                <i class="fas fa-code"></i>
+                                <i class="fas fa-laptop-code"></i>
                             </div>
-                            <h3>Full-Stack Web Dev</h3>
-                            <p>Developing responsive, state-of-the-art web applications using Laravel, React, Node.js, and clean MySQL database architectures.</p>
+                            <h3>Full-Stack Web Development</h3>
+                            <p>End-to-end web engineering covering responsive frontend architectures (React, Next.js)
+                                and robust backend systems (Node.js, Express, Laravel) with optimized SQL/NoSQL
+                                databases.</p>
                         </div>
-                        <div>
-                            <div class="service-price">Custom Solutions</div>
-                        </div>
+                        <div class="service-price">Custom Full-Stack Solutions</div>
                     </div>
 
-                    <!-- Service 2 -->
+                    <!-- Service 2: AI & RAG Chatbot Solutions -->
                     <div class="service-card">
                         <div>
                             <div class="service-icon-wrapper">
                                 <i class="fas fa-robot"></i>
                             </div>
-                            <h3>AI & Chatbot Integration</h3>
-                            <p>Integrating intelligent chatbot services, LangChain-based RAG engines, semantic search indexing, and custom AI agents into existing apps.</p>
+                            <h3>AI & RAG Chatbot Solutions</h3>
+                            <p>Building context-aware conversational AI agents, LangChain retrieval pipelines, vector
+                                database search (FAISS/Chroma), and hallucination-free document QA assistants.</p>
                         </div>
-                        <div>
-                            <div class="service-price">Tailored Pipelines</div>
-                        </div>
+                        <div class="service-price">Intelligent AI Systems</div>
                     </div>
 
-                    <!-- Service 3 -->
+                    <!-- Service 3: Deployment, cPanel & Web Hosting -->
                     <div class="service-card">
                         <div>
                             <div class="service-icon-wrapper">
-                                <i class="fas fa-database"></i>
+                                <i class="fas fa-cloud-upload-alt"></i>
                             </div>
-                            <h3>API & Backend Design</h3>
-                            <p>Structuring robust RESTful APIs, third-party service integrations, high-performance querying, and cloud-ready data systems.</p>
+                            <h3>Deployment, cPanel & Hosting</h3>
+                            <p>Production deployments across cloud platforms (Vercel, Netlify, Render) as well as
+                                traditional cPanel shared/VPS hosting, custom domain mapping, and SSL security.</p>
                         </div>
-                        <div>
-                            <div class="service-price">High Performance</div>
+                        <div class="service-price">Production Ready & Hosted</div>
+                    </div>
+                </div>
+
+                <!-- 2. Featured Web Projects / Sample Works (SECOND) -->
+                <div class="margin-top-large animate-reveal delay-2">
+                    <div style="text-align: center; max-width: 760px; margin: 0 auto 2.5rem auto;">
+                        <h2 class="section-title text-center" style="margin-bottom: 0.75rem;">Sample Works & Deployed
+                            Websites</h2>
+                        <p class="paragraph text-center"
+                            style="color: var(--text-secondary); font-size: 1.05rem; line-height: 1.7;">
+                            A showcase of web applications and intelligent AI platforms demonstrating scalable
+                            codebases,
+                            dynamic responsive interfaces, and live cloud deployments.
+                        </p>
+                    </div>
+
+                    <div class="showcase-grid">
+                        <!-- 1. Before You Go -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Before You Go" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Full Stack Web Platform</span>
+                                </div>
+                                <h3 class="showcase-title">Before You Go</h3>
+                                <h4 class="showcase-subtitle">Smart Travel Planning & Destination Discovery Platform
+                                </h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-blue">React 18</span>
+                                    <span class="showcase-tag accent-blue">TypeScript</span>
+                                    <span class="showcase-tag accent-yellow">Vite</span>
+                                    <span class="showcase-tag accent-green">Node.js</span>
+                                    <span class="showcase-tag accent-purple">MySQL</span>
+                                    <span class="showcase-tag accent-orange">Tailwind</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="http://be4yougo.com/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Study Help Resource Hub -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Study Help Resource Hub" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Academic Resource Portal</span>
+                                </div>
+                                <h3 class="showcase-title">Study Help Resource Hub</h3>
+                                <h4 class="showcase-subtitle">BRAC University Academic Course Resource Collection</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-blue">HTML5</span>
+                                    <span class="showcase-tag accent-blue">CSS3</span>
+                                    <span class="showcase-tag accent-purple">Lenis</span>
+                                    <span class="showcase-tag accent-cyan">GitHub Pages</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1/studyhelp" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://niloyahsan1.github.io/studyhelp/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Nirapod Shobdo -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Nirapod Shobdo" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-universal-access"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Accessibility Web Platform</span>
+                                </div>
+                                <h3 class="showcase-title">Nirapod Shobdo</h3>
+                                <h4 class="showcase-subtitle">Accessible Legal Rights & Justice Web Platform</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-blue">HTML5</span>
+                                    <span class="showcase-tag accent-blue">CSS3</span>
+                                    <span class="showcase-tag accent-green">Netlify</span>
+                                    <span class="showcase-tag accent-orange">Git</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://nirapod-shobdo.com/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4. Team Shunte Chai -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Team Shunte Chai" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Full Stack MVT Web App</span>
+                                </div>
+                                <h3 class="showcase-title">Team Shunte Chai</h3>
+                                <h4 class="showcase-subtitle">Mental Health & Peer Support Community Platform</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-green">Python Django</span>
+                                    <span class="showcase-tag accent-purple">PostgreSQL</span>
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-blue">HTML/CSS</span>
+                                    <span class="showcase-tag accent-cyan">MVT</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://teamshuntechai.com/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. Portfolio - Niloy Ahsan -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Portfolio - Niloy Ahsan" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-user-astronaut"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Personal Portfolio</span>
+                                </div>
+                                <h3 class="showcase-title">Portfolio - Niloy Ahsan</h3>
+                                <h4 class="showcase-subtitle">Modern Interactive Developer & Researcher Portfolio</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-blue">HTML5</span>
+                                    <span class="showcase-tag accent-blue">CSS3</span>
+                                    <span class="showcase-tag accent-purple">Lenis</span>
+                                    <span class="showcase-tag accent-orange">Custom Domain</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://niloyahsan.is-a.dev/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Portfolio - Chaity Rani Ghosh -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Portfolio - Chaity Rani Ghosh" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Client Portfolio Website</span>
+                                </div>
+                                <h3 class="showcase-title">Portfolio - Chaity Ghosh</h3>
+                                <h4 class="showcase-subtitle">Clean Developer & Academic Portfolio Website</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-blue">HTML5</span>
+                                    <span class="showcase-tag accent-blue">CSS3</span>
+                                    <span class="showcase-tag accent-purple">Google Fonts</span>
+                                    <span class="showcase-tag accent-cyan">is-a.dev</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://chaity.is-a.dev/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. Nirapod Shobdo App -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Nirapod Shobdo App" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Cross-Platform App & Platform</span>
+                                </div>
+                                <h3 class="showcase-title">Nirapod Shobdo App</h3>
+                                <h4 class="showcase-subtitle">Inclusive Multi-Modal Legal Rights Platform</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-blue">Flutter</span>
+                                    <span class="showcase-tag accent-blue">Dart</span>
+                                    <span class="showcase-tag accent-yellow">Firebase</span>
+                                    <span class="showcase-tag accent-green">Provider</span>
+                                    <span class="showcase-tag accent-purple">SQFlite</span>
+                                    <span class="showcase-tag accent-orange">C++ / Swift</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://nirapod-shobdo.com/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8. RAG-based Fictional Hospital Assistant -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/image.png" alt="RAG-based Hospital Assistant" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">AI / RAG Web Application</span>
+                                </div>
+                                <h3 class="showcase-title">RAG Hospital Assistant</h3>
+                                <h4 class="showcase-subtitle">Retrieval-Augmented Patient & Clinical QA Chatbot</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-blue">Python</span>
+                                    <span class="showcase-tag accent-purple">LangChain</span>
+                                    <span class="showcase-tag accent-green">FAISS</span>
+                                    <span class="showcase-tag accent-yellow">Streamlit</span>
+                                    <span class="showcase-tag accent-blue">SQLite</span>
+                                    <span class="showcase-tag accent-cyan">RAG / LLM</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://hospital-assistant.streamlit.app/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9. Healthy Habits - Diet Planner Website -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/projects_thumbnail/healthy_habits.png"
+                                        alt="Healthy Habits Diet Planner" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-apple-alt"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Full Stack MVC Web App</span>
+                                </div>
+                                <h3 class="showcase-title">Healthy Habits Diet Planner</h3>
+                                <h4 class="showcase-subtitle">Diet Planning, Calorie Tracker & Consultation Platform
+                                </h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-purple">PHP Laravel</span>
+                                    <span class="showcase-tag accent-blue">MySQL</span>
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-green">PHPUnit</span>
+                                    <span class="showcase-tag accent-orange">MVC</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1/CSE470_Niloy" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <span class="showcase-btn showcase-btn-disabled">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Hosting Soon</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10. BRACU Research Hub -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="BRACU Research Hub" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-microscope"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Full Stack MVC Platform</span>
+                                </div>
+                                <h3 class="showcase-title">BRACU Research Hub</h3>
+                                <h4 class="showcase-subtitle">Academic Research Collaboration & Publication Platform
+                                </h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-purple">PHP Laravel</span>
+                                    <span class="showcase-tag accent-blue">MySQL</span>
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-green">PHPUnit</span>
+                                    <span class="showcase-tag accent-cyan">MVC</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1/BRACU_research_hub" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <span class="showcase-btn showcase-btn-disabled">
+                                        <i class="fas fa-clock"></i>
+                                        <span>Hosting Soon</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 11. General Registration Portal -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="General Registration Portal" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-id-card"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Event Web Application</span>
+                                </div>
+                                <h3 class="showcase-title">General Registration Portal</h3>
+                                <h4 class="showcase-subtitle">Workshop & Event Registration with Digital Pass Generator
+                                </h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-blue">HTML5</span>
+                                    <span class="showcase-tag accent-blue">CSS3</span>
+                                    <span class="showcase-tag accent-green">Google Sheets API</span>
+                                    <span class="showcase-tag accent-purple">html2canvas</span>
+                                    <span class="showcase-tag accent-orange">Vercel</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://general-registration.vercel.app/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 12. Laylatul Qadr Checklist & Virtues -->
+                        <div class="showcase-card">
+                            <div class="showcase-thumb-wrapper">
+                                <div class="showcase-thumb-wrapper-inner">
+                                    <img src="./assets/demo.png" alt="Laylatul Qadr Tracker" class="showcase-thumb">
+                                </div>
+                                <div class="showcase-card-badge">
+                                    <i class="fas fa-moon"></i>
+                                </div>
+                            </div>
+                            <div class="showcase-body">
+                                <div class="showcase-meta">
+                                    <span class="showcase-category">Responsive Web App</span>
+                                </div>
+                                <h3 class="showcase-title">Laylatul Qadr Checklist</h3>
+                                <h4 class="showcase-subtitle">Multi-Lingual Spiritual Task Tracker & Virtues Guide</h4>
+                                <div class="showcase-tags">
+                                    <span class="showcase-tag accent-yellow">JavaScript</span>
+                                    <span class="showcase-tag accent-blue">HTML5</span>
+                                    <span class="showcase-tag accent-blue">CSS3</span>
+                                    <span class="showcase-tag accent-purple">Google Fonts</span>
+                                    <span class="showcase-tag accent-cyan">GitHub Pages</span>
+                                </div>
+                                <div class="showcase-actions">
+                                    <a href="https://github.com/niloyahsan1/Laylatul-Qadr-Tracker" target="_blank"
+                                        class="showcase-btn showcase-btn-outline">
+                                        <i class="fab fa-github"></i>
+                                        <span>Source Code</span>
+                                    </a>
+                                    <a href="https://niloyahsan1.github.io/Laylatul-Qadr-Tracker/" target="_blank"
+                                        class="showcase-btn showcase-btn-primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span>Live Preview</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="animate-reveal delay-3" style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 5rem;">
-                    <a href="index.html#contact" class="btn btn-primary">
-                        <span>Get a Quote / Hire Me</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </a>
-                    <a href="index.html#projects" class="btn btn-secondary">
-                        <span>View Work Samples</span>
-                        <i class="fas fa-arrow-left"></i>
+                <!-- Call to Action Banner -->
+                <div class="animate-reveal delay-3" style="display: flex; justify-content: center; margin-top: 5rem;">
+                    <a href="https://www.linkedin.com/in/niloyahsan1/" target="_blank" class="btn btn-primary">
+                        <span>Reach Out on LinkedIn</span>
+                        <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
             </div>
@@ -121,13 +611,16 @@
                 <a href="https://github.com/niloyahsan1" target="_blank" class="footer-social-link" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/niloyahsan1/" target="_blank" class="footer-social-link" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/niloyahsan1/" target="_blank" class="footer-social-link"
+                    aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://scholar.google.com/citations?user=6UajKGwAAAAJ&hl=en" target="_blank" class="footer-social-link" aria-label="Google Scholar">
+                <a href="https://scholar.google.com/citations?user=6UajKGwAAAAJ&hl=en" target="_blank"
+                    class="footer-social-link" aria-label="Google Scholar">
                     <i class="fas fa-graduation-cap"></i>
                 </a>
-                <a href="https://orcid.org/0009-0004-9710-9893" target="_blank" class="footer-social-link" aria-label="ORCID">
+                <a href="https://orcid.org/0009-0004-9710-9893" target="_blank" class="footer-social-link"
+                    aria-label="ORCID">
                     <i class="fa-brands fa-orcid"></i>
                 </a>
             </div>
